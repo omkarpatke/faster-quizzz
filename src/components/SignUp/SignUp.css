@@ -4,13 +4,12 @@
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    height: 90vh;
+    height: 111vh;
 }
 
 .login-container h3{
     padding-top: 1rem;
     font-size: 1.8rem;
-    color: var(--white-color);
 }
 
 .login-card{
@@ -94,7 +93,11 @@
     transition: .8s all ease-in-out;
 }
 
+.signUp-with-google-btn span{
+    color: var(--white-color);
+}
+
 .signUp-with-google-btn:hover{
-    background-color: var(--black-color);
+    background-color: var(--facebook-bg-color);
     color: var(--white-color);
 }

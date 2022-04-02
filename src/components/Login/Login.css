@@ -93,8 +93,10 @@
     transition: .8s all ease-in-out;
 }
 
-
+.signInWithGoogleBtnText{
+    color: var(--white-color);
+}
 
 .signIn-with-google-btn:hover{
-    background-color: var(--black-color);
+    background-color: var(--facebook-bg-color);
 }

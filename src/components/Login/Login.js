@@ -21,7 +21,7 @@ export default function Login() {
                 <button className="login-btn" type="submit"> Sign In </button>
             </form>
             <h2>OR</h2>
-            <button className="signIn-with-google-btn"><i className="lni lni-google"></i> <span>Sign in with google</span></button>
+            <button className="signIn-with-google-btn"><i className="lni lni-google"></i> <span className='signInWithGoogleBtnText'>Sign in with google</span></button>
 
             <p>I Don't Have An Account</p>
             <Link to='/sign-up'>CREATE AN ACCOUNT</Link>
