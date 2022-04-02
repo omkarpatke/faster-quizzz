@@ -1,0 +1,88 @@
+.homepage-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    gap: 0 5rem;
+}
+
+.btn{
+    width: fit-content;
+    font-size: 1rem !important; 
+}
+
+.heroImg{
+    height: 30rem;
+}
+
+.content{
+    display: flex;
+    text-align: start;
+}
+
+.content-heading{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.quizes-section{
+    background-color: var(--primary-color);
+    min-height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    color: var(--white-color);
+}
+
+.quiz-carts{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-cart{
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--white-color);
+    transition: .6s all ease-in-out;
+    box-shadow: 1px 5px 10px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.quiz-cart:hover{
+    transform: scale(1.1);
+}
+
+.quiz-name{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.quiz-desc{
+    text-decoration: none;
+}
+
+.float-action-btn{
+    background-color: var(--white-color) !important;
+}
+
+.lni-arrow-up{
+    color: var(--primary-color) !important;
+    cursor: pointer;
+}
