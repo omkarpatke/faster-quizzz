@@ -2,17 +2,19 @@ import React from 'react';
 import { cricketPoster } from './cricket-quiz-poster';
 import './Home.css';
 import HeroImg from '../../Images/quiz.png';
-
+import { useNavigate } from "react-router-dom";
 
 
 export default function Home() {
-
+  const navigate = useNavigate();
   const scrollToTop = () => {
     window.scrollTo({
       top:'0',
       behavior:'smooth'
     })
   }
+
+
   return (
     <>
     <div className="homepage-container">
@@ -28,11 +30,11 @@ export default function Home() {
     <div className="quizes-section">
       <h1 className='heading'>Sports Quizes</h1>
     <div className="quiz-carts" id='quizes-section'>
-      <div className="quiz-cart">
+      <div className="quiz-cart" onClick={() => navigate('/quiz')}>
           <div className='quiz-cart-container'>
           <img src={cricketPoster} alt='cricket-quiz-img'/>
           <div className='quiz-name'>Cricket Quiz</div>
-          <div className="quiz-desc">Take a quiz to test yourself. <br /> 10 questions | 20 Marks</div>
+          <div className="quiz-desc">Take a quiz to test yourself. <br /> 5 questions | 10 Marks</div>
           </div>
       </div>
 
@@ -40,7 +42,7 @@ export default function Home() {
           <div className='quiz-cart-container'>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-ZU91PyjPPr5yIFYtFvsY4_33iOi43Dl2Q&usqp=CAU" alt="football-quiz-img" />
           <div className='quiz-name'>FootBall Quiz</div>
-          <div className="quiz-desc">Take a quiz to test yourself. <br /> 10 questions | 10 Marks</div>
+          <div className="quiz-desc">Take a quiz to test yourself. <br /> 5 questions | 10 Marks</div>
           </div>
       </div>
 
@@ -49,7 +51,7 @@ export default function Home() {
           <div className='quiz-cart-container'>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgkEKaQ-DonPBqNKJc4JKpaS1n0QbRCehNyg&usqp=CAU" alt="basketball-quiz-img" />
           <div className='quiz-name'>BasketBall Quiz</div>
-          <div className="quiz-desc">Take a quiz to test yourself. <br /> 10 questions | 20 Marks</div>
+          <div className="quiz-desc">Take a quiz to test yourself. <br /> 5 questions | 10 Marks</div>
           </div>
 
       </div>
