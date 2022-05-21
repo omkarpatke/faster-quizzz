@@ -1,0 +1,28 @@
+.result-page-container{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.result-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+    width: 45rem;
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+}
+
+.currectAns{
+    background-color: rgb(56, 148, 56);
+    width: 100%;
+    padding: 10px 16rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}

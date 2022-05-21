@@ -1,0 +1,15 @@
+.rulesPage-container{
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+    width: 40rem;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90vh;
+    line-height: 1.8;
+    padding-top: 5rem;
+}
+
+.checkboxBtn{
+    margin-top: 1rem;
+}
