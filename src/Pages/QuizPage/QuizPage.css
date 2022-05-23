@@ -11,6 +11,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 10rem;
+    width: 37rem;
 }
 
 .options{
@@ -23,10 +24,12 @@
 
 .option{
     background-color: aliceblue;
-    width: 100%;
-    padding: 10px 16rem;
+    width: 37rem;
     font-size: 1.1rem;
     cursor: pointer;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
 }
 
 .option:hover{

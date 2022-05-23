@@ -7,22 +7,23 @@ export default function QuizPage() {
   const { quizQuestionsState , quizQuestionsDispatch } = useQuizQuestionsContext(); 
   const [ count , setCount ] = useState(0); 
   const [ finalScore , setScore ] = useState(0); 
+  const [ userAnswers , setUserAnswers ] = useState([]); 
   const navigate = useNavigate();
 
   
 
   const optionHandler = (e, CurrectAnswer) => {
+    setUserAnswers([...userAnswers , e.target.innerText ]);
     if(e.target.innerText ===  CurrectAnswer){
       setCount(prev => prev + 1);
       setScore(prev => prev + 2);
-    }else{
-      setCount(prev => prev + 1);
-    }
-
-    if(count === 4){
-      navigate('/quiz-result');
+    }else if(count === 4){
+      quizQuestionsDispatch({type:'USER_ANSWERS', userAnswers: [...userAnswers] });
       quizQuestionsDispatch({type : 'UPDATE_SCORE' , payload : quizQuestionsState.payload ,score: finalScore  } )
-      console.log(quizQuestionsState , finalScore)
+      navigate('/quiz-result');
+    }
+    else{
+      setCount(prev => prev + 1);
     }
   }
 

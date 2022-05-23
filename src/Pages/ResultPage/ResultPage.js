@@ -4,7 +4,7 @@ import './ResultPage.css';
 
 export function ResultPage() {
     const { quizQuestionsState } = useQuizQuestionsContext();
-    console.log(quizQuestionsState)
+
   return (
     <>
     <div className='result-page-container'>
@@ -12,13 +12,15 @@ export function ResultPage() {
     <h2>You Have Scored {quizQuestionsState.score} out of 10</h2>
 
     <div className="questions">
-       {quizQuestionsState.payload.map(question => (
+       {quizQuestionsState.payload.map((question , index) => (
            <>
-           <h4>{question.Ques}</h4>
+           <div key={index} className='quizz-score-answers'>
+           <h3>{question.Ques}</h3>
            <div className="options">
-               {question.option.map(option => (
-                   <div className={question.ans === option ? 'currectAns' : 'option'}>{option}</div>
+               {question.option.map((option , optionIndex) => (
+                   <div key={optionIndex} className={question.ans === option ? 'currectAns' : quizQuestionsState.userAnswers.includes(option) ? 'userSelectedAnswer' : 'option' }>{option}</div>
                ))}
+           </div>
            </div>
            </>
        ))}

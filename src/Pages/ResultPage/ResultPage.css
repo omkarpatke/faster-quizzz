@@ -21,8 +21,28 @@
 
 .currectAns{
     background-color: rgb(56, 148, 56);
-    width: 100%;
-    padding: 10px 16rem;
+    width: 37rem;
     font-size: 1.1rem;
     cursor: pointer;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.userSelectedAnswer{
+    background-color: red;
+    width: 37rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.quizz-score-answers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 37rem;
 }
