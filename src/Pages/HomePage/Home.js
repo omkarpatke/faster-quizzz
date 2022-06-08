@@ -8,8 +8,8 @@ import { useUserAuth , useQuizQuestionsContext } from '../../context/index';
 export default function Home() {
   const navigate = useNavigate();
   const { isLogIn } = useUserAuth();
-  const { quizQuestionsState , quizQuestionsDispatch } = useQuizQuestionsContext();  
-  console.log(quizQuestionsState);
+  const { quizQuestionsDispatch } = useQuizQuestionsContext();  
+
   const Cricket = [
     {
       Ques: "Q1.  Who won the first ever Cricket World Cup in 1975?",
