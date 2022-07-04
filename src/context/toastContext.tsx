@@ -1,15 +1,16 @@
 import { createContext , useContext } from "react";
 import { toast } from "react-toastify";
+import { ChildrenType } from "./quizQuestions.types";
 
 
-const ToastContext = createContext('');
+const ToastContext = createContext({});
 
 const useToastContext = () => useContext(ToastContext);
 
 
 
-const ToastContextProvider = ({children}) => {
-    const notify = (msg , type) => {
+const ToastContextProvider = ({children}:ChildrenType) => {
+    const notify = (msg:string , type:{}) => {
         toast(msg , type);
     }
     

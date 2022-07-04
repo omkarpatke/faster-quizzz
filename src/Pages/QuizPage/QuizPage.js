@@ -4,7 +4,8 @@ import { useQuizQuestionsContext } from '../../context/quiz-questions-context';
 import './QuizPage.css';
 
 export default function QuizPage() {
-  const { quizQuestionsState , quizQuestionsDispatch } = useQuizQuestionsContext(); 
+  const  quizQuestionsState = useQuizQuestionsContext(); 
+  const quizQuestionsDispatch  = useQuizQuestionsContext(); 
   const [ count , setCount ] = useState(0); 
   const [ finalScore , setScore ] = useState(0); 
   const [ userAnswers , setUserAnswers ] = useState([]); 

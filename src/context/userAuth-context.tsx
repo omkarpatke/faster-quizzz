@@ -1,13 +1,14 @@
 import { createContext , useState , useContext, useEffect } from "react";
+import { ChildrenType } from "./quizQuestions.types";
 
 
 
-const UserContext = createContext('');
+const UserContext = createContext({});
 const useUserAuth = () => useContext(UserContext);
 
 
 
-const UserContextProvider = ({children}) => {
+const UserContextProvider = ({children}:ChildrenType) => {
     const [isLogIn , setIsLogIn] = useState(false);
 
     useEffect(() => {

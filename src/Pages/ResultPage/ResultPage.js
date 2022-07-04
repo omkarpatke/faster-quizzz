@@ -3,7 +3,7 @@ import { useQuizQuestionsContext } from '../../context';
 import './ResultPage.css';
 
 export function ResultPage() {
-    const { quizQuestionsState } = useQuizQuestionsContext();
+    const  quizQuestionsState  = useQuizQuestionsContext();
 
   return (
     <>

@@ -6,7 +6,7 @@ import { useToastContext, useUserAuth } from '../../context';
 export default function Navbar() {
   const { isLogIn , setIsLogIn } = useUserAuth();
   const notify = useToastContext();
-  const navigate = useNavigate('')
+  const navigate = useNavigate()
 
   const logoutHandler = () => {
      localStorage.clear();
