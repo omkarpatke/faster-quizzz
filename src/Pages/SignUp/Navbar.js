@@ -6,7 +6,7 @@ import { useToastContext, useUserAuth } from '../../context';
 export default function Navbar() {
   const { isLogIn , setIsLogIn } = useUserAuth();
   const notify = useToastContext();
-  const navigate = useNavigate()
+  const navigate = useNavigate('')
 
   const logoutHandler = () => {
      localStorage.clear();
@@ -20,8 +20,8 @@ export default function Navbar() {
     <nav className="navbar">
     <NavLink to="/" className="logo">Faster Quizz</NavLink>
     <div className="links">
-    {/* <NavLink to="/" className="link">Home</NavLink>
-    <NavLink to="#" className="link">Leader Board 🚀</NavLink> */}
+    {/* <NavLink to="/" className="link">Home</NavLink> */}
+    {/* <NavLink to="/leaderBoard" className="link">Leader Board 🚀</NavLink> */}
     {isLogIn
     ?  <div className="link" onClick={logoutHandler}> Logout </div>
     :  <NavLink to="/login" className="link">Login</NavLink>
